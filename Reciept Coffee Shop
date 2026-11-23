@@ -1,0 +1,97 @@
+#include <iostream>
+using namespace std;
+
+	int main(){
+
+	int itemCode1, itemCode2, quantity1, quantity2;
+	char isMember;
+	double price = 0, subtotal, discount = 0, totalDue, cashTendered, change;
+
+	cout <<"--MERYENDA NI MILING--"<< endl;
+	cout <<"--[1] Turon with Ube    - 25.00" << endl;
+	cout <<"--[2] Frienfries        - 40.00" << endl;
+	cout <<"--[3] Burger W Cheese   - 50.00" << endl;
+	cout <<"--[4] Halo-Halo         - 55.00" << endl;
+	cout <<"--[5] Bananaclue        - 35.00" << endl;
+
+	cout<<"What's your order: "<< endl;
+	cin >> itemCode1;
+
+	if (itemCode1 == 1){
+		price = 25.00; }
+	else if(itemCode1 == 2){
+		price = 40.00;
+	}
+	else if(itemCode1 == 3){
+		price = 50.00;
+	} 
+	else if(itemCode1 == 4){
+		price = 55.00;
+	}
+	else if(itemCode1 == 5){
+		price = 35.00;
+	}
+	else {
+	cout <<"Sorry out of option, please back again!"<<endl;
+	return 0;
+	}
+
+		cout << "How many order: " << endl;
+	cin >> quantity1;
+
+	cout <<"Other order: "<< endl;
+	cin >> itemCode2;
+
+		if (itemCode2 == 1){
+		price = 25.00; }
+	else if(itemCode2 == 2){
+		price = 40.00;
+	}
+	else if(itemCode2 == 3){
+		price = 50.00;
+	}  
+	else if(itemCode2 == 4){
+		price = 55.00;
+	}
+	else if(itemCode2 == 5){
+		price = 35.00;
+	}
+	else {
+	cout <<"Sorry out of option, please back again!"<<endl;
+	return 0;
+	}
+
+	cout << "How many order: " << endl;
+	cin >> quantity2;
+
+	cout << "You have Membership? [Y][N]" << endl;
+	cin >> isMember;
+
+	subtotal = price * quantity1;
+	subtotal = price * quantity2;
+
+	if (isMember == 'Y' || isMember == 'y'){
+		discount = subtotal * 0.10;
+	} else if (isMember == 'N' || isMember == 'n') {
+		cout << ""; }
+	else {
+		discount = 0;
+	}
+
+	totalDue = subtotal - discount;
+
+	cout << endl << "---Resibo---" << endl;
+	cout <<"Subtotal: "<< subtotal << endl;
+	cout <<"Discount: "<< discount << endl;
+	cout <<"Total Price: "<< totalDue << endl;
+
+	cout <<"Bayad nyo po: "<<endl;
+	cin >> cashTendered;
+
+	change = cashTendered - totalDue;
+	cout << "Change: " << change << endl;
+	cout << "Salamat po sa pagbili! " << endl;
+
+	system("pause");
+	return 0;
+}
