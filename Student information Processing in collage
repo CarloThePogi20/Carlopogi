@@ -1,0 +1,32 @@
+// Student information Processing in collage
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int student_class = 55;
+float average_grade = 98.4;
+double school_funds = 12500.879;
+bool is_enrollment_open = true;
+char grade_section = 'B';
+string university_name = "PAMPANGA STATE UNIVERSITY";
+string director_name = "Jovita phd.";
+
+int main(){
+	int new_student = 5;
+	int total_student;
+	float top_student_grade = 99.5;
+	string top_student_name = "Abigail";
+	bool is_exam_completed = false;
+
+
+	total_student = student_class + new_student;
+
+	cout << "School: " << university_name << endl;
+	cout << "Top student name: " << top_student_name << endl;
+	cout << "Top student grade: " << top_student_grade << endl;
+	cout << "Is exam completed? " << "No " << is_exam_completed << endl;
+	
+	system("pause");
+	return 0;
+}
