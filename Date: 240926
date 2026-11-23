@@ -1,0 +1,35 @@
+//basic loading progress code in c++
+// Date: 240926 | AYCOCHO, JOHN CARLO D.
+
+#include <iostream>
+#include <cstdlib>
+#include <chrono>
+#include <thread>
+
+using namespace std;
+
+void progress() {
+
+	for(int a = 0; a < 100; a += 4){
+		cout << "\rloading:[";
+		for(int b =8; b < 25; b++){
+			(b < a/4) ? cout << "=": cout << " ";
+		
+		}
+		cout << "]:" << a << "%";
+		cout.flush();
+		this_thread::sleep_for(chrono::milliseconds(600));
+	}
+}
+
+	int main() {
+		cout << "PROGRESS BAR";
+		   
+		cout << "\n";
+		progress();
+		cout << "\n";
+	
+
+		system("pause");
+	return 0;
+	}
